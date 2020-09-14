@@ -1,1 +1,6 @@
-<input matInput id="todoListInput" placeholder="Todo Description" />
+<input matInput type="text" id="todoListInput" class="todoListInput" placeholder="Todo Description" [(ngModel)]="todoItemTitle" (keypress)="addNewTodoItem($event)" />
+<mat-card class="todoList">
+  <div>
+    <app-todo-item *ngFor="let item of todoList" [todoData]="item"></app-todo-item>
+  </div>
+</mat-card>

@@ -1,0 +1,26 @@
+.todoItem {
+  display: flex;
+  background: grey;
+  padding: 2% 0;
+  text-align: left;
+  height: 100%;
+}
+
+.todoItemCheckbox {
+  height: 4vh;
+  width: 4vh;
+  margin: auto 2%;
+}
+
+.todoItemTitle {
+  min-width: 60%;
+  width: 84%;
+  color: white;
+  font-size: 30px;
+  margin: 5px 0;
+  line-height: 100%;
+}
+
+.deleteButton {
+  margin: 0 2.5%;
+}

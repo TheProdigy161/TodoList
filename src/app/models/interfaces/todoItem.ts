@@ -1,5 +1,5 @@
 export interface ITodoItem {
   title: string;
-  creationDate: Date;
-  completed: boolean;
+  completed?: boolean;
+  creationDate?: Date;
 }
