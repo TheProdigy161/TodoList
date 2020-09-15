@@ -1,7 +1,7 @@
 <div *ngIf="todoData !== undefined" class="todoItem">
   <input type="checkbox" class="todoItemCheckbox"([ngModel])="todoData.completed" />
   <div class="todoItemTitle">{{todoData.title}}</div>
-  <button class="deleteButton" mat-mini-fab (click)="onClickDelete()">
+  <button class="deleteButton" mat-mini-fab color="warn" (click)="onClickDelete()">
       <mat-icon class="mat-18">delete</mat-icon>
   </button>
 </div>

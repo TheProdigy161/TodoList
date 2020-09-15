@@ -1,9 +1,23 @@
+$todoListWidth: 40vw;
+
 .todoList {
-  max-width: 40vw;
+  max-width: $todoListWidth;
   min-width: 350px;
   margin: 0 auto;
+  background: #b1b4ff;
 }
 
 .todoListInput {
+  text-align: center;
   margin-bottom: 5vh;
+  font-size: 30px;
+  min-width: 350px;
+  width: $todoListWidth;
+  border-radius: 20px;
+  background: grey;
+  color: white;
+}
+
+::placeholder {
+  color: white;
 }

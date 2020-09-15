@@ -1,3 +1,4 @@
+import { TodoListService } from './../../services/todo-list.service';
 import { TodoItem } from './../../models/todoItem';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -11,13 +12,13 @@ export class TodoItemComponent implements OnInit {
   @Input()
   todoData: TodoItem;
 
-  constructor() {
+  constructor(private todoListService: TodoListService) {
   }
 
   ngOnInit(): void {
   }
 
   onClickDelete(): void {
-
+    this.todoListService.removeTodoItem(this.todoData.id);
   }
 }

@@ -1,3 +1,4 @@
+import { TodoListService } from './../../services/todo-list.service';
 import { TodoItem } from './../../models/todoItem';
 import { Component, OnInit } from '@angular/core';
 import { ITodoItem } from 'src/app/models/interfaces/todoItem';
@@ -8,10 +9,9 @@ import { ITodoItem } from 'src/app/models/interfaces/todoItem';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  todoList: TodoItem[] = [new TodoItem({title: 'Test'}), new TodoItem({title: 'Test'})];
   todoItemTitle: string = '';
 
-  constructor() { }
+  constructor(public todoListService: TodoListService) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +24,7 @@ export class TodoListComponent implements OnInit {
       title: this.todoItemTitle
     };
 
-    this.todoList.push(new TodoItem(todoData));
+    this.todoListService.addTodoItem(new TodoItem(todoData));
     this.todoItemTitle = '';
   }
 }
