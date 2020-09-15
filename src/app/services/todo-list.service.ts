@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { networkInterfaces } from 'os';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { TodoItem } from '../models/todoItem';
 
@@ -7,9 +6,11 @@ import { TodoItem } from '../models/todoItem';
   providedIn: 'root'
 })
 export class TodoListService {
-  private _todoList: BehaviorSubject<TodoItem[]> = new BehaviorSubject([new TodoItem({id: 1, title: 'Test'}), new TodoItem({id: 2, title: 'Test'})]);
+  private _todoList: BehaviorSubject<TodoItem[]> = new BehaviorSubject([]);
+  private _lastId: BehaviorSubject<number> = new BehaviorSubject(0);
 
   public readonly todoList$: Observable<TodoItem[]> = this._todoList.asObservable();
+  public readonly lastId$: Observable<number> = this._lastId.asObservable();
 
   constructor() { }
 
@@ -25,6 +26,7 @@ export class TodoListService {
     currentTodoList.push(item);
 
     this._todoList.next(currentTodoList);
+    this._lastId.next(item.id);
   }
 
   removeTodoItem(id: number): void {

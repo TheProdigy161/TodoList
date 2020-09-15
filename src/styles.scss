@@ -1,5 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
+$baseFontColor: black;
+
+$appBackground: white;
+
+$todoItemBackgroundColor: rgb(235, 235, 235);
+$todoItemFontColor: rgb(160, 160, 160);
+
+$todoListInputFontColor: $baseFontColor;
+$todoListBackgroundColor: rgb(207, 207, 207);
+$todoListInputBackgroundColor: grey;
+$todoListInputPlaceholderBackgroundColor: white;
+
 html {
   height: auto;
   min-height: 100vh;
@@ -12,7 +24,7 @@ html {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: #cfcfe8;
+  background: $appBackground;
 }
 
 html, body { height: 100%; }

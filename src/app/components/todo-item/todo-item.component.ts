@@ -12,10 +12,15 @@ export class TodoItemComponent implements OnInit {
   @Input()
   todoData: TodoItem;
 
+  isLastItem: boolean;
+
   constructor(private todoListService: TodoListService) {
   }
 
   ngOnInit(): void {
+    this.todoListService.lastId$.subscribe((id => {
+      this.isLastItem = id === this.todoData.id;
+    }));
   }
 
   onClickDelete(): void {

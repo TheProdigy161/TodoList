@@ -1,23 +1,27 @@
+@import '../../../styles.scss';
+
 $todoListWidth: 40vw;
 
 .todoList {
   max-width: $todoListWidth;
   min-width: 350px;
   margin: 0 auto;
-  background: #b1b4ff;
+  background: $todoListBackgroundColor;
+}
+
+mat-form-field {
+  width: 100%;
+  // margin-bottom: 2.5vh;
 }
 
 .todoListInput {
-  text-align: center;
-  margin-bottom: 5vh;
-  font-size: 30px;
-  min-width: 350px;
-  width: $todoListWidth;
-  border-radius: 20px;
-  background: grey;
-  color: white;
+  text-align: left;
+  font-size: 20px;
+  width: calc(100% - 4px);
+  padding: 0;
+  color: $todoListInputFontColor;
 }
 
 ::placeholder {
-  color: white;
+  // color: $todoListInputPlaceholderBackgroundColor;
 }
