@@ -20,6 +20,9 @@ export class TodoListComponent implements OnInit {
     if (event.key !== 'Enter')
       return;
 
+    if (!this.todoItemTitle)
+      return;
+
     const todoData: ITodoItem = {
       title: this.todoItemTitle
     };

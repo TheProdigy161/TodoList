@@ -3,7 +3,7 @@
 .todoItem {
   display: flex;
   background: $todoItemBackgroundColor;
-  padding: 2% 0;
+  padding: 1% 0;
   text-align: left;
   height: 100%;
 }
@@ -15,7 +15,7 @@
 .todoItemCheckbox {
   // height: 4vh;
   // width: 4vh;
-  margin: auto 2%;
+  margin: auto 1% auto 1.5%;
 }
 
 .todoItemTitle {
@@ -23,8 +23,9 @@
   width: 84%;
   color: $todoItemFontColor;
   font-size: 30px;
-  margin: 5px 0;
+  margin: 5px auto 5px 0 ;
   line-height: 100%;
+  word-wrap: break-word;
 }
 
 .todoItemComplete {
@@ -32,5 +33,5 @@
 }
 
 .deleteButton {
-  margin: 0 2.5%;
+  margin: 0 1%;
 }

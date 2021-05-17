@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
   ],
   imports: [
     BrowserModule,

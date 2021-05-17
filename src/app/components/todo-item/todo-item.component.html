@@ -2,6 +2,6 @@
   <input type="checkbox" class="todoItemCheckbox" [(ngModel)]="todoData.completed" [disabled]="todoData.completed" />
   <div class="todoItemTitle" [class.todoItemComplete]="todoData.completed">{{todoData.title}}</div>
   <button class="deleteButton" mat-icon-button color="warn" (click)="onClickDelete()">
-      <mat-icon class="mat-18">close</mat-icon>
+      <mat-icon class="mat-18">cancel</mat-icon>
   </button>
 </div>

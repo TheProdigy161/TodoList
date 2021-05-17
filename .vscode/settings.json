@@ -1,5 +1,6 @@
 {
     "staticWebApps.appSubpath": "/",
     "staticWebApps.apiSubpath": "",
-    "staticWebApps.appArtifactSubpath": "dist/TodoList"
+    "staticWebApps.appArtifactSubpath": "dist/TodoList",
+    "angular.enable-strict-mode-prompt": false
 }
